@@ -6,6 +6,7 @@
 			<legend>Tema 2</legend>
 			<a href="<?=base_url()?>t2/ej10">Ej.10</a><br/>
 			<a href="<?=base_url()?>t2/ej11">Ej.11</a><br/>
+			<a href="<?=base_url()?>t2/ej18">Ej.18</a><br/>
 		</fieldset>
 	</div>
 </div>
