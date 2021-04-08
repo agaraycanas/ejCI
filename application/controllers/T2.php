@@ -22,14 +22,15 @@ class T2 extends CI_Controller {
     }
     
     private function ej18_2() {
-        $datos['etiqueta'] = ['uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez','once','doce','trece'.'catorce','quince'];
-        //$datos['etiqueta'] = ['one','two','three','cuatro','cinco','seis','siete','ocho','nueve','diez','once','doce','trece'.'catorce','quince'];
-        
+        $datos['etiqueta'] = ['uno','dos','tres','cuatro','cinco','seis','siete','ocho','nueve','diez','once','doce','trece','catorce','quince'];
+        $datos['nOP'] = isset($_GET['nOP'])?$_GET['nOP']:2;
         frame($this,'t2/ej18/dos',$datos);
     }
     
     private function ej18_3() {
-        frame($this,'t2/ej18/tres');
+        $datos['n'] = isset($_GET['n'])?$_GET['n']:1;
+        $datos['suma'] = $datos['n'] + 2;
+        frame($this,'t2/ej18/tres',$datos);
     }
     
 }

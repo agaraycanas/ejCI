@@ -5,7 +5,7 @@
 	
 	<form action="<?=base_url()?>t2/ej18/3">
 		<?php $s=true?>
-		<?php for ($i=1;$i<=$_GET['nOP'];$i++):?>
+		<?php for ($i=1;$i<=$nOP;$i++):?>
 			<input type="radio" id="id-<?=$i?>" name="n" value="<?=$i?>" <?= ($s?'checked="checked"':'')?>/>
 			<label for="id-<?=$i?>"><?=$etiqueta[$i-1]?></label>
 			<br/>
