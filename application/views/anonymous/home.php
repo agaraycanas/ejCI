@@ -8,5 +8,11 @@
 			<a href="<?=base_url()?>t2/ej11">Ej.11</a><br/>
 			<a href="<?=base_url()?>t2/ej18">Ej.18</a><br/>
 		</fieldset>
+
+		<fieldset>
+			<legend>Tema 3</legend>
+			<a href="<?=base_url()?>t3/ej12">Ej.12</a><br/>
+		</fieldset>
+
 	</div>
 </div>
