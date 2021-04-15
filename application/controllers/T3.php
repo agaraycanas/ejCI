@@ -22,6 +22,7 @@ class T3 extends CI_Controller {
     private function ej12_2() {
         if (session_status () == PHP_SESSION_NONE) {session_start ();}
         $_SESSION['n'] = (isset($_SESSION['n']) ? $_SESSION['n'] : $_POST['n']);
+        $_SESSION['nTotal'] = (isset($_SESSION['nTotal']) ? $_SESSION['nTotal'] : $_POST['n']);
         
         if ( isset($_SESSION['sumandos'])) {
             $_SESSION['sumandos'][] = $_POST['sumando'];
@@ -35,7 +36,9 @@ class T3 extends CI_Controller {
             redirect(base_url().'t3/ej12/3');
         }
         else {
-            $data['n'] = $_SESSION['n']--;
+            $data['nActual'] = $_SESSION['nTotal']-$_SESSION['n']+1;
+            $data['nTotal'] = $_SESSION['nTotal'];
+            $_SESSION['n']--;
             frame($this,'t3/ej12/dos',$data);
         }
     }
