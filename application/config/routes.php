@@ -53,3 +53,4 @@ $route['default_controller'] = 'anonymous';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['h'] = 'anonymous/unNombreDeMetodoHorrible';
+$route['t4/ej1/a'] = 't4/ej1AJAX';
