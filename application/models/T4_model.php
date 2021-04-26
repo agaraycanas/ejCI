@@ -1,0 +1,122 @@
+<?php
+
+class T4_model extends CI_Model
+{
+
+    private $bd = [
+        'Andalucía' => [
+            'Almería',
+            'Cádiz',
+            'Córdoba',
+            'Granada',
+            'Huelva',
+            'Jaén',
+            'Málaga',
+            'Sevilla'
+        ],
+        'Aragón' => [
+            'Huesca',
+            'Teruel',
+            'Zaragoza'
+        ],
+        'Asturias (Principado de)' => [
+            'Asturias'
+        ],
+        'Canarias' => [
+            'Palmas (Las)',
+            'Santa Cruz de Tenerife'
+        ],
+        'Cantabria' => [
+            'Cantabria'
+        ],
+        'Castilla y León' => [
+            'Ávila',
+            'Burgos',
+            'León',
+            'Palencia',
+            'Salamanca',
+            'Segovia',
+            'Soria',
+            'Valladolid',
+            'Zamora'
+        ],
+        'Castilla-La Mancha' => [
+            'Albacete',
+            'Ciudad Real',
+            'Cuenca',
+            'Guadalajara',
+            'Toledo'
+        ],
+        'Cataluña' => [
+            'Barcelona',
+            'Gerona',
+            'Lérida',
+            'Tarragona'
+        ],
+        'Ceuta (Ciudad de)' => [
+            'Ceuta'
+        ],
+        'Comunidad Valenciana' => [
+            'Alicante',
+            'Castellón',
+            'Valencia'
+        ],
+        'Extremadura' => [
+            'Badajoz',
+            'Cáceres'
+        ],
+        'Galicia' => [
+            'Coruña (La)',
+            'Lugo',
+            'Orense',
+            'Pontevedra'
+        ],
+        'Islas Baleares' => [
+            'Islas Baleares'
+        ],
+        'Madrid (Comunidad de)' => [
+            'Madrid'
+        ],
+        'Melilla (Ciudad de)' => [
+            'Melilla'
+        ],
+        'Murcia (Región de)' => [
+            'Murcia'
+        ],
+        'Navarra (Comunidad Foral de)' => [
+            'Navarra'
+        ],
+        'País Vasco' => [
+            'Álava',
+            'Guipúzcoa',
+            'Vizcaya'
+        ],
+        'Rioja (La)' => [
+            'Rioja (La)'
+        ]
+    ];
+
+    public function ej2_init()
+    {
+        R::nuke();
+        foreach ($this->bd as $ccaa => $provincias) {
+            $c = R::dispense('ccaa');
+            $c->nombre = $ccaa;
+            R::store($c);
+
+            foreach ($provincias as $provincia) {
+                $p = R::dispense('provincia');
+                $p->nombre = $provincia;
+                $p->ccaa = $c;
+                R::store($p);
+            }
+        }
+    }
+
+    public function getProvincias($ccaa)
+    {
+        $c = R::find('ccaa','nombre=?',[$ccaa]);
+        return $c->ownProvinciaList;
+        
+    }
+}

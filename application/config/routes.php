@@ -54,3 +54,4 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['h'] = 'anonymous/unNombreDeMetodoHorrible';
 $route['t4/ej1/a'] = 't4/ej1AJAX';
+$route['t4/ej2/a'] = 't4/ej2AJAX';

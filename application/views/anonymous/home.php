@@ -17,6 +17,7 @@
 		<fieldset>
 			<legend>Tema 4</legend>
 			<a href="<?=base_url()?>t4/ej1">Ej.1</a><br/>
+			<a href="<?=base_url()?>t4/ej2">Ej.2</a><br/>
 		</fieldset>
 
 	</div>
