@@ -14,7 +14,7 @@ class T4 extends CI_Controller {
     public function ej2() {
         $this->load->model('t4_model');
         $this->t4_model->ej2_init();
-        frame($this,'t4/ej02/index');
+        $this->load->view('t4/ej02/index');
     }
     
     public function ej2AJAX() {
@@ -22,6 +22,12 @@ class T4 extends CI_Controller {
         $this->load->model('t4_model');
         $data['provincias'] = $this->t4_model->getProvincias($ccaa);
         $this->load->view('t4/ej02/ajax',$data);
+    }
+    
+    public function ej2AJAXrellenarCCAA() {
+        $this->load->model('t4_model');
+        $data['ccaas'] = $this->t4_model->getCCAAs();
+        $this->load->view('t4/ej02/ajaxCCAA',$data);
     }
     
     

@@ -119,4 +119,10 @@ class T4_model extends CI_Model
         return $c->ownProvinciaList;
         
     }
+    
+    public function getCCAAs()
+    {
+        return R::findAll('ccaa');
+    }
+    
 }
