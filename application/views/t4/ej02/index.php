@@ -31,6 +31,7 @@
 	<select onchange="f()" id="idCCAA">
 		<option>Andalucía</option>
 		<option>Aragón</option>
+		<option>Canarias</option>
 	</select>
 	<br/>
 	

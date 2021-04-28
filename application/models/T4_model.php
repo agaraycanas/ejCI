@@ -115,7 +115,7 @@ class T4_model extends CI_Model
 
     public function getProvincias($ccaa)
     {
-        $c = R::find('ccaa','nombre=?',[$ccaa]);
+        $c = R::findOne('ccaa','nombre = ?',[$ccaa]);
         return $c->ownProvinciaList;
         
     }

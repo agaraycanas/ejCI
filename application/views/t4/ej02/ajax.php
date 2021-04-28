@@ -1,1 +1,7 @@
-<h2><?=$ccaa?></h2>
+<select>
+    <?php foreach ($provincias as $p):?>
+    	<option>
+    		<?= $p->nombre?>
+    	</option>
+    <?php endforeach;?>
+</select>
