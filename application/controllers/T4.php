@@ -26,15 +26,17 @@ class T4 extends CI_Controller {
     
     
     private function getMensaje($nombre) {
-        $num = rand(1,3);
         $final = '';
-        switch ($num) {
+        
+        switch (rand(1,3)) {
             case 1:$inicio = '¡¡ Qué pasa';$final=' !!';break;
             case 2:$inicio = 'Hola';break;
             case 3:$inicio = 'Qué tal estás';break;
         }
         
-        $mensaje = "$inicio $nombre $final";
+        $marca = rand(1,3);
+        
+        $mensaje = "<h$marca>$inicio $nombre $final</h$marca>";
         return $mensaje;
     }
 }
