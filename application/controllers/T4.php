@@ -17,11 +17,11 @@ class T4 extends CI_Controller {
         $this->load->view('t4/ej02/index');
     }
     
-    public function ej2AJAX() {
+    public function ej2AJAXrellenarProvincia() {
         $ccaa= isset($_GET['ccaa']) ? $_GET['ccaa'] :'desconocida';
         $this->load->model('t4_model');
         $data['provincias'] = $this->t4_model->getProvincias($ccaa);
-        $this->load->view('t4/ej02/ajax',$data);
+        $this->load->view('t4/ej02/ajaxProvincias',$data);
     }
     
     public function ej2AJAXrellenarCCAA() {

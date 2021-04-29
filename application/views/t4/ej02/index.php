@@ -24,17 +24,17 @@
 		var texto = y.responseText;
 		document.getElementById("idCCAA").innerHTML = texto;
 		
-		cambiarProvinciaAJAX();
+		cambiarProvincia();
 	}
 	
 	function rellenarCCAA() {
 		y = new XMLHttpRequest();
-		y.open("GET","<?=base_url().'t4/ej2/aCCAA'?>",true);
+		y.open("GET","<?=base_url().'t4/ej2/X-rccaa'?>",true);
 		y.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 		y.send();
 		
 		y.onreadystatechange = function() {
-			if (y.readyState==4 && x.status==200) {
+			if (y.readyState==4 && y.status==200) {
 				rellenarCCAAajax();
 			}
 		}
@@ -47,7 +47,7 @@
 	
 	function cambiarProvincia() {
 		x = new XMLHttpRequest();
-		x.open("GET","<?=base_url().'t4/ej2/a?ccaa='?>"+document.getElementById('idCCAA').value,true);
+		x.open("GET","<?=base_url().'t4/ej2/X-rp?ccaa='?>"+document.getElementById('idCCAA').value,true);
 		x.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 		x.send();
 		

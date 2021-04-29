@@ -4,6 +4,10 @@ class T4_model extends CI_Model
 {
 
     private $bd = [
+        'Abacete' => [
+            'pepita','juanita'
+        ],
+        
         'Andalucía' => [
             'Almería',
             'Cádiz',
