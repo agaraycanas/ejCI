@@ -20,5 +20,11 @@
 			<a href="<?=base_url()?>t4/ej2">Ej.2</a><br/>
 		</fieldset>
 
+		<fieldset>
+			<legend>Examen</legend>
+			<a href="<?=base_url()?>examen/persona/cGet">Crear persona</a><br/>
+			<a href="<?=base_url()?>examen/persona/r">Lista de personas</a><br/>
+		</fieldset>
+
 	</div>
 </div>
