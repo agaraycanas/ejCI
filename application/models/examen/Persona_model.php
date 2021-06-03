@@ -11,5 +11,9 @@ class Persona_model extends CI_Model {
     function findAll() {
         return R::findAll('persona');
     }
+    function findAllBySexo($sexo) {
+        return R::find('persona','sexo = ?', [ $sexo ]);
+    }
+    
 }
 ?>

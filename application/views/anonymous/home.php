@@ -24,6 +24,7 @@
 			<legend>Examen</legend>
 			<a href="<?=base_url()?>examen/persona/cGet">Crear persona</a><br/>
 			<a href="<?=base_url()?>examen/persona/r">Lista de personas</a><br/>
+			<a href="<?=base_url()?>examen/persona/rf">Lista de personas filtrada</a><br/>
 		</fieldset>
 
 	</div>

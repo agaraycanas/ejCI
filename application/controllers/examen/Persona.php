@@ -22,5 +22,14 @@ class Persona extends CI_Controller {
         $data['personas'] = $this->persona_model->findAll();
         frame($this,"examen/personaR",$data);
     }
+
+    public function rf() {
+        $sexo = isset($_GET['sexo'])?$_GET['sexo']:'hombre';
+        $this->load->model('examen/persona_model');
+        $data['sexo'] = $sexo;
+        $data['personas'] = $this->persona_model->findAllBySexo($sexo);
+        frame($this,"examen/personaRF",$data);
+    }
+    
 }
 ?>
