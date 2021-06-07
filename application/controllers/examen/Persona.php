@@ -12,9 +12,15 @@ class Persona extends CI_Controller {
         $anyo= isset($_POST['anyo']) ? $_POST['anyo'] : 1999;
         
         $this->load->model('examen/persona_model');
-        $this->persona_model->cPersona($nombre,$sexo,$anyo);
+        try {
+            $this->persona_model->cPersona($nombre,$sexo,$anyo);
+            prg("$nombre creado","examen/persona/r","success");
+        }
+        catch (Exception $e) {
+            prg($e->getMessage(),"examen/persona/cGet");
+        }
         
-        redirect("/");
+        //redirect(base_url().'examen/persona/r');
     }
     
     public function r() {
