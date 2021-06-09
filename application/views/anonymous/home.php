@@ -25,6 +25,9 @@
 			<a href="<?=base_url()?>examen/persona/cGet">Crear persona</a><br/>
 			<a href="<?=base_url()?>examen/persona/r">Lista de personas</a><br/>
 			<a href="<?=base_url()?>examen/persona/rf">Lista de personas filtrada</a><br/>
+			<br/>
+			<a href="<?=base_url()?>examen/pais/c">Crear país</a><br/>
+			<a href="<?=base_url()?>examen/pais/r">Lista de países</a><br/>
 		</fieldset>
 
 	</div>
